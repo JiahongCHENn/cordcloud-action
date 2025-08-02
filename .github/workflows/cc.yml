@@ -3,14 +3,14 @@ name: CordCloud
 on:
   schedule:
     - cron: "30 16 * * *"
-    - cron: "30 11 * * *"
+    - cron: "00 04 * * *"
   workflow_dispatch:
 
 jobs:
   checkin:
     runs-on: ubuntu-latest
     steps:
-      - uses: yanglbme/cordcloud-action@main
+      - uses: JiahongCHENn/cordcloud-action@main
         with:
           email: ${{ secrets.CC_EMAIL }}
           passwd: ${{ secrets.CC_PASSWD }}
